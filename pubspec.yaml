@@ -63,6 +63,9 @@ flutter:
      - assets/images/logo.gif
      - assets/Imiot.png
      - assets/images/profile.gif
+     - assets/images/Shopping Cart.png
+     - assets/images/profile.gif
+     - assets/images/Search.png
      
 
   # An image asset can refer to one or more resolution-specific "variants", see
