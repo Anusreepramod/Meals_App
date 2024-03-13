@@ -66,6 +66,14 @@ flutter:
      - assets/images/Shopping Cart.png
      - assets/images/profile.gif
      - assets/images/Search.png
+     - assets/images/image 1.png
+     - assets/Less Than.png
+     - assets/images/Rectangle 8.png
+     - assets/images/Rectangle 8 (3).png
+     - assets/images/Rectangle 8 (4).png
+     - assets/images/Rectangle 8 (5).png
+     - assets/images/Rectangle 8 (6).png
+     - assets/images/Rectangle 8 (7).png
      
 
   # An image asset can refer to one or more resolution-specific "variants", see
