@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:mealsapp/menu%20appetizer.dart';
 
 class CustomContainer extends StatelessWidget {
   final String text;
@@ -37,17 +39,22 @@ class CustomContainer extends StatelessWidget {
             ),
           ),
           const Spacer(),
-          Container(
-            width: 61,
-            height: 51,
-            decoration: ShapeDecoration(
-              image: DecorationImage(
-                image: AssetImage(imagePath),
-                fit: BoxFit.fill,
-              ),
-              
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15),
+          GestureDetector(
+             onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => MenuAppetizer()));
+                          },
+            child: Container(
+              width: 61,
+              height: 51,
+              decoration: ShapeDecoration(
+                image: DecorationImage(
+                  image: AssetImage(imagePath),
+                  fit: BoxFit.fill,
+                ),
+                
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15),
+                ),
               ),
             ),
           ),
