@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:mealsapp/AccountScreen.dart';
 import 'package:mealsapp/menu.dart';
 
 class home extends StatelessWidget {
@@ -15,9 +16,14 @@ class home extends StatelessWidget {
             child: SizedBox(
               width: 40,
               height: 40,
-              child: Image.asset(
-                'assets/images/profile.gif',
-                fit: BoxFit.cover,
+              child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => AccountScreen()));
+                          },
+                child: Image.asset(
+                  'assets/images/profile.gif',
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
           ),
