@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mealsapp/AccountScreen.dart';
+import 'package:mealsapp/UnavailableScreen.dart';
+import 'package:mealsapp/kartScreen.dart';
 import 'package:mealsapp/menu.dart';
 
 class home extends StatelessWidget {
@@ -28,11 +30,16 @@ class home extends StatelessWidget {
             ),
           ),
         ],
-        leading: IconButton(
-          icon: const Icon(Icons.shopping_cart),
-          onPressed: () {},
+        leading: 
+          IconButton(
+            icon: const Icon(Icons.shopping_cart),
+            onPressed: () {
+              Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const KartScreen())
+              );
+            },
+          ),
         ),
-      ),
       backgroundColor: const Color.fromARGB(255, 213, 213, 205),
       body: Column(
         children: [
@@ -56,42 +63,47 @@ class home extends StatelessWidget {
               ),
             ),
           ),
-          Container(
-            margin: const EdgeInsets.symmetric(
-              horizontal: 16.0,
-              vertical: 8.0,
-            ),
-            padding: const EdgeInsets.all(
-              2.0,
-            ),
-            width: 310,
-            height: 36,
-            decoration: ShapeDecoration(
-              color: Colors.white,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
+          GestureDetector(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => Unavailable()));
+                          },
+            child: Container(
+              margin: const EdgeInsets.symmetric(
+                horizontal: 16.0,
+                vertical: 8.0,
               ),
-            ),
-            child: Row(
-              children: [
-                Image.asset(
-                  'assets/images/Search.png',
-                  width: 24,
-                  height: 24,
+              padding: const EdgeInsets.all(
+                2.0,
+              ),
+              width: 310,
+              height: 36,
+              decoration: ShapeDecoration(
+                color: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
                 ),
-                const SizedBox(
-                  width: 8,
-                ),
-                Text(
-                  'Search for your location !',
-                  style: TextStyle(
-                    color: Colors.black.withOpacity(0.5),
-                    fontSize: 15,
-                    fontFamily: 'Montserrat',
-                    fontWeight: FontWeight.w600,
+              ),
+              child: Row(
+                children: [
+                  Image.asset(
+                    'assets/images/Search.png',
+                    width: 24,
+                    height: 24,
                   ),
-                ),
-              ],
+                  const SizedBox(
+                    width: 8,
+                  ),
+                  Text(
+                    'Search for your location !',
+                    style: TextStyle(
+                      color: Colors.black.withOpacity(0.5),
+                      fontSize: 15,
+                      fontFamily: 'Montserrat',
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           const SizedBox(height: 40),

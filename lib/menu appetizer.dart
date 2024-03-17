@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mealsapp/CartScreen.dart';
+import 'package:mealsapp/kartScreen.dart';
 
 class MenuAppetizer extends StatelessWidget {
   const MenuAppetizer({Key? key}) : super(key: key);
@@ -56,7 +56,7 @@ class MenuAppetizer extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
               child: GestureDetector(
                           onTap: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => CartScreen()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => KartScreen()));
                           },
                 child: Container(
                   padding: const EdgeInsets.all(10),

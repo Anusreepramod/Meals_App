@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mealsapp/CoursesCategory.dart';
+import 'package:mealsapp/home.dart';
 
 class PaymentScreen extends StatelessWidget {
   const PaymentScreen({Key? key});
@@ -115,16 +116,21 @@ class PaymentScreen extends StatelessWidget {
                 onPressed: () {
                   // Add your action here
                 },
-                child: Text(
-                  'CONTINUE to HOME',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                    fontFamily: 'Montserrat',
-                    fontWeight: FontWeight.w600,
-                    height: 0,
-                    letterSpacing: 0.75,
+                child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => home()));
+                          },
+                  child: Text(
+                    'CONTINUE to HOME',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 15,
+                      fontFamily: 'Montserrat',
+                      fontWeight: FontWeight.w600,
+                      height: 0,
+                      letterSpacing: 0.75,
+                    ),
                   ),
                 ),
               ),
