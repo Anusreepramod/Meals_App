@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mealsapp/AccountScreen.dart';
+import 'package:mealsapp/CoursesCategory.dart';
+import 'package:mealsapp/ItemDetailed.dart';
 import 'package:mealsapp/kartScreen.dart';
 
 class MenuAppetizer extends StatelessWidget {
@@ -13,21 +16,31 @@ class MenuAppetizer extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: ClipOval(
-              child: Image.asset(
-                'assets/images/profile.gif',
-                fit: BoxFit.cover,
-                width: 40,
-                height: 40,
+              child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => AccountScreen()));
+                          },
+                child: Image.asset(
+                  'assets/images/profile.gif',
+                  fit: BoxFit.cover,
+                  width: 40,
+                  height: 40,
+                ),
               ),
             ),
           ),
         ],
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Image.asset(
-            'assets/Less Than.png',
-            width: 40,
-            height: 40,
+          child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => courses()));
+                          },
+            child: Image.asset(
+              'assets/Less Than.png',
+              width: 40,
+              height: 40,
+            ),
           ),
         ),
       ),
@@ -56,7 +69,7 @@ class MenuAppetizer extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
               child: GestureDetector(
                           onTap: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => KartScreen()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => ItemDetails()));
                           },
                 child: Container(
                   padding: const EdgeInsets.all(10),

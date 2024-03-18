@@ -21,7 +21,11 @@ class AccountScreen extends StatelessWidget {
           ),
         ],
         leading: IconButton(
-          icon: Image.asset('assets/Less Than.png'),
+          icon: GestureDetector(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => home()));
+                          },
+                          child: Image.asset('assets/Less Than.png')),
           onPressed: () {},
         ),
       ),

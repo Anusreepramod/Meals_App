@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mealsapp/AccountScreen.dart';
 import 'package:mealsapp/CoursesCategory.dart';
 import 'package:mealsapp/home.dart';
 
@@ -16,9 +17,14 @@ class PaymentScreen extends StatelessWidget {
             child: SizedBox(
               width: 40,
               height: 40,
-              child: Image.asset(
-                'assets/images/profile.gif',
-                fit: BoxFit.cover,
+              child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => AccountScreen()));
+                          },
+                child: Image.asset(
+                  'assets/images/profile.gif',
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
           ),
@@ -122,7 +128,7 @@ class PaymentScreen extends StatelessWidget {
                           },
                   child: Text(
                     'CONTINUE to HOME',
-                    textAlign: TextAlign.center,
+                    textAlign: TextAlign.center, 
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 15,

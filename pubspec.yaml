@@ -74,6 +74,9 @@ flutter:
      - assets/images/Rectangle 8 (5).png
      - assets/images/Rectangle 8 (6).png
      - assets/images/Rectangle 8 (7).png
+     - assets/images/Rectangle 16.png
+     - assets/images/Rectangle 17.png
+     - assets/images/Frame 17 .png
      
 
   # An image asset can refer to one or more resolution-specific "variants", see

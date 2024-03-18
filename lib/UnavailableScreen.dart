@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:mealsapp/AccountScreen.dart';
 import 'package:mealsapp/menu appetizer.dart';
 import 'package:mealsapp/CoursesCategory.dart';
 import 'package:mealsapp/home.dart';
@@ -17,9 +18,14 @@ class Unavailable extends StatelessWidget {
             child: SizedBox(
               width: 40,
               height: 40,
-              child: Image.asset(
-                'assets/images/profile.gif',
-                fit: BoxFit.cover,
+              child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => AccountScreen()));
+                          },
+                child: Image.asset(
+                  'assets/images/profile.gif',
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
           ),

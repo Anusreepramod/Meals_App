@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mealsapp/AccountScreen.dart';
 import 'package:mealsapp/CoursesCategory.dart';
+import 'package:mealsapp/home.dart';
 
 class Menu extends StatelessWidget {
   const Menu({Key? key});
@@ -14,17 +16,27 @@ class Menu extends StatelessWidget {
             child: SizedBox(
               width: 40,
               height: 40,
-              child: Image.asset(
-                'assets/images/profile.gif',
-                fit: BoxFit.cover,
+              child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => AccountScreen()));
+                          },
+                child: Image.asset(
+                  'assets/images/profile.gif',
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
           ),
         ],
-        leading: Image.asset(
-          'assets/Less Than.png',
-          width: 40,
-          height: 40,
+        leading: GestureDetector(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => home()));
+                          },
+          child: Image.asset(
+            'assets/Less Than.png',
+            width: 40,
+            height: 40,
+          ),
         ),
       ),
       backgroundColor: const Color.fromARGB(255, 213, 213, 205),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:mealsapp/AccountScreen.dart';
 import 'package:mealsapp/home.dart';
 import 'package:mealsapp/PaymentScreen.dart';
+import 'package:mealsapp/menu%20appetizer.dart';
 
 class KartScreen extends StatelessWidget {
   const KartScreen({Key? key}) : super(key: key);
@@ -166,11 +168,16 @@ class KartScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: ClipOval(
-              child: Image.asset(
-                'assets/images/profile.gif',
-                fit: BoxFit.cover,
-                width: 40,
-                height: 40,
+              child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => AccountScreen()));
+                          },
+                child: Image.asset(
+                  'assets/images/profile.gif',
+                  fit: BoxFit.cover,
+                  width: 40,
+                  height: 40,
+                ),
               ),
             ),
           ),
@@ -182,10 +189,15 @@ class KartScreen extends StatelessWidget {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const PaymentScreen()));
             },
-            child: Image.asset(
-              'assets/Less Than.png',
-              width: 40,
-              height: 40,
+            child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => MenuAppetizer()));
+                          },
+              child: Image.asset(
+                'assets/Less Than.png',
+                width: 40,
+                height: 40,
+              ),
             ),
           ),
         ),
